@@ -1,56 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      href="resources/favicon.ico"
-      type="image/x-icon"
-      sizes="96x96"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>devChallenges.io | Minimal Blog Card</title>
+  <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  <link rel="stylesheet" href="styles.css">
+  <title>devChallenges.io | Minimal Blog Card</title>
+</head>
 
-    <!--You are welcome to delete these styles or modify them in your own stylesheet -->
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<body>
+  <main class="center-items">
+    <article class="card">
+      <figure>
+        <img src="./resources/Cactus.jpg" srcset="./resources/Cactus.jpg 1x, ./resources/Cactus@2x.jpg 2x"
+          alt="Cactus Image" height="152" width="336" loading="eager" class="card__image" />
+      </figure>
+      <span class="card__badge">Design</span>
+      <header class="card-content">
+        <h1 class="card-content__title">Embracing Minimalist</h1>
+        <p class="card-content__paragraph">
+          From minimalist sculptures to minimalist paintings, this blog will inspire you to
+          appreciate the beauty that lies in simplicity.
+        </p>
+      </header>
+      <div class="divider"></div>
+      <footer class="card-footer">
+        <h3 class="card-footer__author">Annie Spratt</h3>
+      </footer>
+    </article>
+  </main>
+</body>
 
-      body {
-        height: 100vh;
-      }
-
-      .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
-      }
-
-      .author-info a {
-        text-decoration: none;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Design
-
-  Embracing Minimalism
-
-  From minimalist sculptures to minimalist paintings, this blog will inspire you to appreciate the beauty that lies in simplicity.
-
-  Annie Spratt -->
-
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
-    </div>
-  </body>
 </html>

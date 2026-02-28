@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@layer reset, tokens, base, layout, components, utilities;
+
+@layer reset {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@layer tokens {
+  :root {
+    --color-background: #FAFAF9;
+    --color-foreground: #20293A;
+    --color-badge-background: #F2EAFD;
+    --color-badge-foregorund: #7C19EE;
+    --color-divider: #E5EAF0;
+
+    --font-sans: "Sora", sans-serif;
+
+    --text-xs: 0.625rem;
+    --text-sm: 0.75rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.125rem;
+
+    --radius-md: 0.5rem;
+    --radisu-lg: 0.75rem;
+    --radius-full: 9999px;
+  }
+}
+
+@layer base {
+  html {
+    height: 100dvh;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    color: var(--color-foreground);
+    letter-spacing: .015em;
+  }
+}
+
+@layer layout {
+  .center-items {
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+  }
+}
+
+@layer components {
+  .card {
+    max-width: 23rem;
+    box-shadow: 8px 8px 20px 0px rgba(85, 85, 85, 0.08);
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    border-radius: var(--radius-md);
+
+    figure {
+      margin-block-end: 1rem;
+
+      .card__image {
+        border-radius: var(--radius-md);
+      }
+    }
+
+    .card__badge {
+      font-weight: 600;
+      font-size: var(--text-xs);
+      color: var(--color-badge-foregorund);
+      background-color: var(--color-badge-background);
+      padding-block: 0.25rem;
+      padding-inline: 1rem;
+      border-radius: var(--radius-full);
+    }
+
+    .card-content {
+      margin-block-start: 1rem;
+
+      .card-content__title {
+        font-size: var(--text-lg);
+        margin-block-end: .375rem;
+      }
+
+      .card-content__paragraph {
+        font-size: var(--text-base);
+        line-height: 1.5;
+        color: var(--color-foreground);
+        opacity: 60%;
+      }
+    }
+
+    .card-footer {
+      margin-block-end: 1.25rem;
+
+      .card-footer__author {
+        font-size: var(--text-sm);
+        font-weight: normal;
+        opacity: 80%;
+      }
+    }
+  }
+}
+
+@layer utilities {
+  .divider {
+    border: 1px solid var(--color-divider);
+    margin-block: 1.25rem;
+    margin-inline: -1rem;
+  }
+}
